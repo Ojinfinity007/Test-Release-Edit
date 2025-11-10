@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Finding the best way to make changes to releases</title>
+<style>
+:root{
+--bg:#0f1724; --card:#0b1220; --accent:#7c3aed; --accent-2:#06b6d4; --muted:#9aa4b2; --glass: rgba(255,255,255,0.04);
+--radius:18px;
+--font-sans: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:var(--font-sans);background:linear-gradient(180deg,#071023 0%, #071b2a 45%, #091827 100%);color:white;-webkit-font-smoothing:antialiased}
+
+
+.wrap{max-width:1100px;margin:48px auto;padding:32px}
+
+
+.hero{
+display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;
+}
+
+
+.card{
+background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+border-radius:var(--radius);padding:28px;box-shadow:0 6px 30px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.04)
+}
+
+
+h1{font-size:34px;margin:0 0 12px;line-height:1.02;letter-spacing:-0.02em}
+p.lead{color:var(--muted);margin-top:0}
+
+
+.controls{display:flex;gap:12px;margin-top:18px}
+.btn{background:linear-gradient(90deg,var(--accent),var(--accent-2));padding:10px 16px;border-radius:12px;border:none;color:white;font-weight:600;cursor:pointer;box-shadow:0 6px 20px rgba(124,58,237,0.18)}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);box-shadow:none;color:var(--muted)}
+
+
+/* graph area */
+.visual{
+position:relative;height:420px;border-radius:14px;overflow:hidden;padding:18px;display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.005));border:1px solid rgba(255,255,255,0.03)
+}
+
+
+/* commit icons */
+.timeline{display:flex;gap:8px;align-items:flex-end;padding:18px}
+.commit{width:36px;height:36px;border-radius:9px;background:linear-gradient(180deg,#0b1220,#061728);display:flex;align-items:center;justify-content:center;border:2px solid rgba(255,255,255,0.04);transform-origin:center;}
+.commit svg{width:18px;height:18px;opacity:0.95}
+
+
+/* animated release bubble */
+.release-bubble{position:absolute;right:20px;top:24px;background:linear-gradient(135deg,#0b1220, rgba(255,255,255,0.02));padding:12px 14px;border-radius:12px;border:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;gap:10px}
+.release-pill{background:linear-gradient(90deg,var(--accent),var(--accent-2));padding:8px;border-radius:999px;font-weight:700}
+
+
+/* flow diagram */
+.flow{display:flex;gap:12px;align-items:center;margin-top:14px}
+.flow .node{background:var(--glass);padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);display:flex;gap:10px;align-items:center}
+.arrow{opacity:0.6}
+
+
+/* cards below */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+.mini{padding:14px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));border:1px solid rgba(255,255,255,0.03)}
+.mini h3{margin:0;font-size:14px}
+.muted{color:var(--muted);font-size:13px;margin-top:8px}
+
+
+/* subtle animations */
+@keyframes floaty {0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+.commit:nth-child(odd){animation:floaty 4s ease-in-out infinite}
+
+
+/* SVG commit trace */
+.graph-svg{width:100%;height:160px}
+
+
+/* responsive */
+@media (max-width:920px){.hero{grid-template-columns:1fr;}.grid{grid-template-columns:1fr 1fr}.wrap{padding:20px}.visual{height:360px}}
+@media (max-width:560px){.grid{grid-template-columns:1fr}.visual{height:300px}}
+
+
+/* small footer */
+footer{color:var(--muted);margin-top:18px;font-size:13px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="hero">
+<div class="card">
+<h1>Finding the best way to make changes to releases</h1>
+<p class="lead">Explore strategies, workflows and visual cues to safely patch releases without creating unnecessary new release entries — visually guided and interactive.</p>
+</html>
