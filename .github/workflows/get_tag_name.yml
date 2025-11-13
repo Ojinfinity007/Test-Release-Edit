@@ -1,0 +1,12 @@
+name: Get tag name
+
+on:
+ workflow_dispatch
+
+jobs:
+ show-name:
+  runs-on: ubuntu-latest
+  steps:
+  - name: show name
+    run: echo ${{ github.ref_name }}
+  
