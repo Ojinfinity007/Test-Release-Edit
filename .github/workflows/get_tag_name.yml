@@ -8,5 +8,5 @@ jobs:
   runs-on: ubuntu-latest
   steps:
   - name: show name
-    run: echo ${{ github.ref_name }}
+    run: git tag
   
