@@ -9,5 +9,7 @@ jobs:
   steps:
   - uses: actions/checkout@v4
   - name: show name
-    run: git tag
+    run: |
+        git tag
+        
   
