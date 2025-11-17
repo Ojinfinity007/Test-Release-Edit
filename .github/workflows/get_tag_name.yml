@@ -11,7 +11,7 @@ jobs:
   - name: show name
     run: |
         git tag
-        git log
+        git status
         echo "git not working"
         
   
